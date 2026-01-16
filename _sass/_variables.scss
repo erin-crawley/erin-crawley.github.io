@@ -56,10 +56,10 @@ $sidebar-link-max-width     : 250px;
    ========================================================================== */
 
 $gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
+$dark-gray                  : #4a4e51;
+$darker-gray                : #313436;
+$light-gray                 : #bcbfc1;
+$lighter-gray               : #f1f1f2;
 
 // Warm Academic Color Palette
 $deep-blue                  : #2c5aa0;  // Primary accent - academic blue
@@ -110,7 +110,7 @@ $xing-color                 : #006567;
 /* links */
 $link-color                 : $deep-blue;
 $link-color-hover           : $terracotta;
-$link-color-visited         : mix(#000, $deep-blue, 15%);
+$link-color-visited         : #254d87;
 $masthead-link-color        : $slate-text;
 $masthead-link-color-hover  : $terracotta;
 
