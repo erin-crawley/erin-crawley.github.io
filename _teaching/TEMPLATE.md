@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course"  # or "Graduate course" or "Workshop"
 permalink: /teaching/YYYY-semester-course-name
 venue: "Harvard University, Physics Department"
-date: YYYY-MM-DD  # Start date of course
+date: 2099-01-01  # Placeholder date - replace with actual start date
 location: "Cambridge, MA"
 published: false  # This prevents the template from appearing on the site
 ---

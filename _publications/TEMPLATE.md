@@ -3,7 +3,7 @@ title: "Your Paper Title Here"
 collection: publications
 permalink: /publication/YYYY-MM-DD-short-title
 excerpt: 'Brief one-sentence description of what this paper is about.'
-date: YYYY-MM-DD
+date: 2099-01-01  # Placeholder date - replace with publication date
 venue: 'Journal Name or Conference'
 paperurl: 'https://arxiv.org/abs/XXXX.XXXXX'  # or DOI link
 citation: 'Your Name, Coauthor Name. (YYYY). &quot;Paper Title.&quot; <i>Journal Name</i>. Volume(Issue), pages.'
