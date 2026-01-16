@@ -6,6 +6,7 @@ permalink: /teaching/YYYY-semester-course-name
 venue: "Harvard University, Physics Department"
 date: YYYY-MM-DD  # Start date of course
 location: "Cambridge, MA"
+published: false  # This prevents the template from appearing on the site
 ---
 
 Brief description of the course - what topics it covered, your role (instructor, teaching fellow, teaching assistant), and any notable aspects.

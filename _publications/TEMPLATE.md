@@ -7,6 +7,7 @@ date: YYYY-MM-DD
 venue: 'Journal Name or Conference'
 paperurl: 'https://arxiv.org/abs/XXXX.XXXXX'  # or DOI link
 citation: 'Your Name, Coauthor Name. (YYYY). &quot;Paper Title.&quot; <i>Journal Name</i>. Volume(Issue), pages.'
+published: false  # This prevents the template from appearing on the site
 ---
 
 ## Abstract
