@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Custom Warm Academic Theme Enhancements
+   ========================================================================== */
+
+/* Subtle terracotta accents on buttons and interactive elements */
+.btn {
+  background-color: $terracotta;
+  color: white;
+
+  &:hover {
+    background-color: darken($terracotta, 10%);
+  }
+}
+
+/* Enhanced link styling with smooth transitions */
+a {
+  transition: color 0.2s ease-in-out;
+}
+
+/* Warm background for code blocks */
+pre, code {
+  background-color: $code-background-color;
+  border: 1px solid #e0d8c8;
+}
+
+/* Page title styling with terracotta underline accent */
+.page__title {
+  padding-bottom: 0.5em;
+  border-bottom: 3px solid $terracotta;
+  margin-bottom: 1.5em;
+}
+
+/* Archive item hover effect */
+.archive__item {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    .archive__item-title {
+      color: $terracotta;
+    }
+  }
+}
+
+/* Sidebar enhancements */
+.author__avatar {
+  border: 3px solid $warm-beige;
+}
+
+.author__urls {
+  li a {
+    &:hover {
+      color: $terracotta;
+    }
+  }
+}
+
+/* Masthead (top navigation) styling */
+.greedy-nav {
+  background: linear-gradient(to bottom, #ffffff 0%, #fafbfc 100%);
+  border-bottom: 1px solid #e8e8e8;
+
+  a {
+    &:hover {
+      color: $terracotta !important;
+    }
+  }
+
+  .visible-links a:before {
+    background: $terracotta;
+  }
+}
+
+/* Section headings with subtle styling */
+h2 {
+  color: $deep-blue;
+  margin-top: 1.5em;
+  padding-top: 0.5em;
+}
+
+h3 {
+  color: $slate-text;
+  margin-top: 1.25em;
+}
+
+/* Add some warmth to horizontal rules */
+hr {
+  border-color: $warm-beige;
+  border-width: 2px;
+}
+
+/* Publication and teaching item cards */
+.archive__item-teaser {
+  border: 1px solid $warm-beige;
+}
+
+/* Enhance the author bio section */
+.author__bio {
+  color: darken($slate-text, 5%);
+  font-size: 0.95em;
+}
+
+/* Improve readability with slightly increased line height */
+p {
+  line-height: 1.7;
+}
+
+/* Style for lists in content */
+.page__content {
+  ul, ol {
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+}

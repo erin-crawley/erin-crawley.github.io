@@ -13,8 +13,8 @@ $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 1.3em;
 
 /* system typefaces */
-$serif                      : Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$serif                      : "Crimson Text", Georgia, "Times New Roman", Times, serif;
+$sans-serif                 : "Source Sans Pro", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 $monospace                  : Monaco, Consolas, "Lucida Console", monospace;
 
 /* sans serif typefaces */
@@ -29,7 +29,7 @@ $calisto                    : "Calisto MT", serif;
 $garamond                   : Garamond, serif;
 
 $global-font-family         : $sans-serif;
-$header-font-family         : $sans-serif;
+$header-font-family         : $serif;
 $caption-font-family        : $serif;
 
 /* type scale */
@@ -52,7 +52,7 @@ $sidebar-link-max-width     : 250px;
 
 
 /*
-   Colors
+   Colors - Warm Academic Theme
    ========================================================================== */
 
 $gray                       : #7a8288;
@@ -61,18 +61,24 @@ $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
-$body-color                 : #fff;
-$background-color           : #fff;
-$code-background-color      : #fafafa;
-$code-background-color-dark : $light-gray;
-$text-color                 : $dark-gray;
-$border-color               : $lighter-gray;
+// Warm Academic Color Palette
+$deep-blue                  : #2c5aa0;  // Primary accent - academic blue
+$terracotta                 : #c85a54;  // Secondary accent - warm terracotta
+$warm-beige                 : #e8dcc4;  // Supporting - subtle backgrounds
+$slate-text                 : #2d3748;  // Main text color
 
-$primary-color              : #7a8288;
+$body-color                 : #fff;
+$background-color           : #fafbfc;  // Very subtle off-white
+$code-background-color      : #f5f5f0;  // Warm code background
+$code-background-color-dark : $warm-beige;
+$text-color                 : $slate-text;
+$border-color               : #e8e8e8;
+
+$primary-color              : $deep-blue;
 $success-color              : #62c462;
 $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
-$info-color                 : #52adc8;
+$info-color                 : $deep-blue;
 
 /* brands */
 $behance-color              : #1769FF;
@@ -102,11 +108,11 @@ $xing-color                 : #006567;
 
 
 /* links */
-$link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#fff, $link-color, 25%);
-$masthead-link-color        : $primary-color;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%);
+$link-color                 : $deep-blue;
+$link-color-hover           : $terracotta;
+$link-color-visited         : mix(#000, $deep-blue, 15%);
+$masthead-link-color        : $slate-text;
+$masthead-link-color-hover  : $terracotta;
 
 
 /*
