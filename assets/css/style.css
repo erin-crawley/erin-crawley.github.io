@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Erin Crawley — erin-crawley.github.io
+   Skin: "Meridian" — cool paper, blue-black ink, muted teal accent.
+   All colour and type live in the custom properties below; changing skins
+   means editing this one block and nothing else.
+   ========================================================================== */
+
+:root {
+  /* colour */
+  --bg:        #F5F5F3;   /* cool paper — deliberately not white */
+  --surface:   #EBEBE7;
+  --text:      #1E2024;   /* blue-black — deliberately not black */
+  --text-mute: #5A5E66;
+  --accent:    #2F6B6B;   /* muted teal */
+  --accent-lo: #1F4F4F;
+  --rule:      #D8D8D3;
+
+  /* type */
+  --display: "Newsreader", Georgia, "Times New Roman", serif;
+  --body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* measure */
+  --measure: 34rem;
+
+  /* motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- reset ---------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 150ms var(--ease);
+}
+
+a:hover { color: var(--accent-lo); }
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection { background: rgba(47, 107, 107, 0.16); }
+
+/* --- layout --------------------------------------------------------------- */
+
+.page {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (max-width: 32rem) {
+  .page { padding: 3.5rem 1.25rem; }
+}
+
+/* --- content -------------------------------------------------------------- */
+
+.portrait {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+.name {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(2.75rem, 9vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.role {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  line-height: 1.4;
+}
+
+.affiliation {
+  font-size: 0.95rem;
+  color: var(--text-mute);
+  margin-top: 0.35rem;
+}
+
+.rule {
+  width: 3rem;
+  height: 1px;
+  border: 0;
+  background: var(--rule);
+  margin: 2.25rem 0;
+}
+
+.note {
+  color: var(--text-mute);
+  max-width: 28rem;
+}
+
+.note a {
+  border-bottom: 1px solid rgba(47, 107, 107, 0.35);
+  transition: border-color 150ms var(--ease), color 150ms var(--ease);
+}
+
+.note a:hover { border-color: var(--accent-lo); }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.links a { position: relative; padding-bottom: 3px; }
+
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 250ms var(--ease);
+}
+
+.links a:hover::after { width: 100%; }
+
+/* Touch devices get no hover affordances and need larger targets. */
+@media (hover: none) {
+  .links { gap: 1.25rem 1.75rem; }
+  .links a { padding: 0.4rem 0; }
+  .links a::after { display: none; }
+}
+
+/* --- motion ---------------------------------------------------------------
+   Content is visible by default. The animation only *adds* an entrance for
+   users who haven't asked for reduced motion — so if the animation never
+   runs, nothing is left invisible.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: reveal 700ms var(--ease) forwards;
+  }
+  .reveal-1 { animation-delay:  70ms; }
+  .reveal-2 { animation-delay: 140ms; }
+  .reveal-3 { animation-delay: 210ms; }
+  .reveal-4 { animation-delay: 280ms; }
+}
+
+@keyframes reveal {
+  to { opacity: 1; transform: none; }
+}
