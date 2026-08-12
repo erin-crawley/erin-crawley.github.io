@@ -3,7 +3,7 @@ layout: home
 ---
 
 <p class="lead reveal reveal-3">
-I am a physics PhD candidate at Harvard University.
+I am a postdoctoral researcher in physics at Harvard University.
 </p>
 
 <p class="note reveal reveal-3">

@@ -1,6 +1,6 @@
 # erin-crawley.github.io
 
-Personal website of Erin Crawley, physics PhD candidate at Harvard University.
+Personal website of Erin Crawley, postdoctoral researcher in physics at Harvard University.
 
 Static HTML and CSS, served by GitHub Pages. No build step.
 

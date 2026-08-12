@@ -1,15 +1,15 @@
 # --- site identity ----------------------------------------------------------
 
 title:       "Erin Crawley"
-tagline:     "Physics PhD Candidate"
-description: "Erin Crawley is a physics PhD candidate at Harvard University in Cambridge, Massachusetts."
+tagline:     "Postdoctoral Researcher"
+description: "Erin Crawley is a postdoctoral researcher in physics at Harvard University in Cambridge, Massachusetts."
 url:         "https://erin-crawley.github.io"
 baseurl:     ""
 lang:        "en-US"
 
 author:
   name:        "Erin Crawley"
-  role:        "Physics PhD Candidate"
+  role:        "Postdoctoral Researcher"
   affiliation: "Harvard University"
   location:    "Cambridge, Massachusetts"
   photo:       "/images/erin-crawley.jpg"
