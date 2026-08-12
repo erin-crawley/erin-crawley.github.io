@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<section class="page-head">
+  <div class="wrapper">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {%- if page.subtitle %}<p class="page-subtitle">{{ page.subtitle }}</p>{% endif -%}
+  </div>
+</section>
+
+<main class="content">
+  <div class="wrapper prose">
+    {{ content }}
+  </div>
+</main>

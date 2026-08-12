@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{%- assign page_title = page.title | default: site.title -%}
+{%- if page.url == "/" -%}
+  {%- assign full_title = site.title | append: " — " | append: site.tagline | append: ", " | append: site.author.affiliation -%}
+{%- else -%}
+  {%- assign full_title = page_title | append: " — " | append: site.title -%}
+{%- endif -%}
+{%- assign desc = page.description | default: site.description -%}
+
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ desc | strip_html | normalize_whitespace }}">
+
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ desc | strip_html | normalize_whitespace }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ site.author.photo | absolute_url }}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14332F">
+
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2314332F'/><text x='50' y='72' font-size='62' font-family='Georgia,serif' fill='%23E5F0ED' text-anchor='middle'>E</text></svg>">
+
+{%- feed_meta -%}
+
+<!-- Fonts via <link>, not @import inside the CSS: an @import serially blocks,
+     since the browser must fetch and parse the stylesheet before it even
+     discovers the font request. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400&family=Inter+Tight:wght@400;500;600&display=swap">
+
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">

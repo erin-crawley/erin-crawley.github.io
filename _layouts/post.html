@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<section class="page-head">
+  <div class="wrapper">
+    <p class="eyebrow"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time></p>
+    <h1 class="page-title">{{ page.title }}</h1>
+  </div>
+</section>
+
+<main class="content">
+  <div class="wrapper prose">
+    {{ content }}
+
+    <hr class="rule">
+    <p><a href="{{ '/blog/' | relative_url }}">&larr; All posts</a></p>
+  </div>
+</main>

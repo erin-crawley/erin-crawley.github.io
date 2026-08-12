@@ -1,0 +1,17 @@
+{%- comment -%}
+  Renders only the profiles actually filled in in _config.yml, so adding ORCID
+  later is a one-line config change.
+
+  Note the `!= ""` test on every entry. In Liquid an empty string is TRUTHY —
+  only nil and false are falsy — so testing the value alone happily renders
+  <a href="">ORCID</a> for a blank config entry: a dead link that reloads the
+  current page.
+{%- endcomment -%}
+<nav class="links{% if include.class %} {{ include.class }}{% endif %}" aria-label="Contact and profiles">
+  {%- if site.profiles.email    and site.profiles.email    != "" %}<a href="mailto:{{ site.profiles.email }}">Email</a>{% endif -%}
+  {%- if site.profiles.scholar  and site.profiles.scholar  != "" %}<a href="{{ site.profiles.scholar }}">Scholar</a>{% endif -%}
+  {%- if site.profiles.orcid    and site.profiles.orcid    != "" %}<a href="{{ site.profiles.orcid }}">ORCID</a>{% endif -%}
+  {%- if site.profiles.arxiv    and site.profiles.arxiv    != "" %}<a href="{{ site.profiles.arxiv }}">arXiv</a>{% endif -%}
+  {%- if site.profiles.github   and site.profiles.github   != "" %}<a href="{{ site.profiles.github }}">GitHub</a>{% endif -%}
+  {%- if site.profiles.linkedin and site.profiles.linkedin != "" %}<a href="{{ site.profiles.linkedin }}">LinkedIn</a>{% endif -%}
+</nav>

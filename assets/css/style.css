@@ -145,11 +145,120 @@ h1, h2, h3 {
   margin-top: 0.4rem;
 }
 
+/* --- nav (renders only once _data/navigation.yml has entries) -------------- */
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-weight: 500;
+}
+
+.nav a { color: var(--band-mute); position: relative; padding-bottom: 3px; }
+.nav a:hover,
+.nav a[aria-current="page"] { color: var(--band-text); }
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 1px;
+  background: var(--band-text);
+  transition: width 250ms var(--ease);
+}
+.nav a:hover::after,
+.nav a[aria-current="page"]::after { width: 100%; }
+
+/* --- inner page headers --------------------------------------------------- */
+
+.page-head {
+  background: var(--band);
+  color: var(--band-text);
+  padding: 3.25rem 0 3rem;
+}
+
+.page-title {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(2rem, 5.5vw, 2.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+.page-subtitle { color: var(--band-mute); margin-top: 0.5rem; }
+.page-head .eyebrow { margin-bottom: 0.6rem; color: var(--band-mute); }
+
 /* --- body ----------------------------------------------------------------- */
 
 .content { padding: 3.5rem 0 4rem; }
 
 .lead { font-size: 1.08rem; }
+
+/* --- prose: markdown-generated content ------------------------------------ */
+
+.prose > * + * { margin-top: 1rem; }
+
+.prose h2 {
+  font-size: 1.7rem;
+  margin-top: 2.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.prose h3 {
+  font-family: var(--body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-top: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.prose ul, .prose ol { padding-left: 1.25rem; }
+.prose li + li { margin-top: 0.3rem; }
+.prose li::marker { color: var(--accent); }
+
+.prose a { border-bottom: 1px solid rgba(67, 113, 60, 0.35); }
+.prose a:hover { border-color: var(--accent-lo); }
+.prose .links a, .prose a.plain { border-bottom: 0; }
+
+.prose blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.25rem;
+  color: var(--text-mute);
+  font-style: italic;
+}
+
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--surface);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+}
+
+.prose pre {
+  background: var(--band);
+  color: var(--band-text);
+  padding: 1.1rem 1.25rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+.prose pre code { background: none; padding: 0; color: inherit; }
+
+.prose table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; }
+.prose th, .prose td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid var(--rule); }
+.prose th { font-weight: 600; background: var(--surface); }
+
+.prose img { border-radius: 4px; margin-top: 1.5rem; }
+
+.prose figure figcaption {
+  font-size: 0.85rem;
+  color: var(--text-mute);
+  margin-top: 0.5rem;
+}
 
 .note { color: var(--text-mute); margin-top: 1rem; }
 

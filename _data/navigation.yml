@@ -1,0 +1,18 @@
+# Header navigation. Add an entry here when a page has real content —
+# the nav renders itself from this file, and stays hidden while it's empty.
+# The site should never link to a page that isn't finished.
+#
+# Ready to uncomment as each page lands:
+#
+# - title: "Research"
+#   url: /research/
+# - title: "Publications"
+#   url: /publications/
+# - title: "Teaching"
+#   url: /teaching/
+# - title: "CV"
+#   url: /cv/
+# - title: "Blog"
+#   url: /blog/
+
+main: []

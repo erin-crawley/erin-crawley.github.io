@@ -1,0 +1,51 @@
+# --- site identity ----------------------------------------------------------
+
+title:       "Erin Crawley"
+tagline:     "Physics PhD Candidate"
+description: "Erin Crawley is a physics PhD candidate at Harvard University in Cambridge, Massachusetts."
+url:         "https://erin-crawley.github.io"
+baseurl:     ""
+lang:        "en-US"
+
+author:
+  name:        "Erin Crawley"
+  role:        "Physics PhD Candidate"
+  affiliation: "Harvard University"
+  location:    "Cambridge, Massachusetts"
+  photo:       "/images/erin-crawley.jpg"
+
+# Anything left blank here simply doesn't render — see _includes/profile-links.html
+profiles:
+  email:    "erincrawley@g.harvard.edu"
+  scholar:  "https://scholar.google.com/citations?hl=en&user=akDS0X4AAAAJ"
+  github:   "https://github.com/erin-crawley"
+  linkedin: "https://www.linkedin.com/in/erin-crawley-25a392188"
+  orcid:    ""
+  arxiv:    ""
+
+# --- build ------------------------------------------------------------------
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: /blog/:year/:month/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .github

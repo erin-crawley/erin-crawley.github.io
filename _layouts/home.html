@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="wrapper">
+    {%- if site.author.photo -%}
+    <img class="portrait reveal" src="{{ site.author.photo | relative_url }}"
+         alt="{{ site.author.name }}" width="112" height="112">
+    {%- endif -%}
+    <h1 class="name reveal reveal-1">{{ site.author.name }}</h1>
+    <p class="eyebrow reveal reveal-2">{{ site.author.role }}</p>
+    <p class="affiliation reveal reveal-2">{{ site.author.affiliation }} &middot; {{ site.author.location }}</p>
+  </div>
+</section>
+
+<main class="content">
+  <div class="wrapper prose">
+    {{ content }}
+
+    <hr class="rule reveal reveal-4">
+    {%- include profile-links.html class="reveal reveal-4" -%}
+  </div>
+</main>
